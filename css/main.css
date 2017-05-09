@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Kalam:700|Montserrat");
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import "https://daneden.github.io/animate.css/animate.min.css";
+/*-------------------------------*/
+/*           VARIABLES           */
+/*-------------------------------*/
+body {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%; }
+
+html {
+  height: 100%; }
+
+.nav .open > a {
+  background-color: transparent; }
+  .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent; }
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+#wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  padding-left: 0;
+  transition: all 0.5s ease; }
+  #wrapper.toggled {
+    padding-left: 480px; }
+    #wrapper.toggled #sidebar-wrapper {
+      width: 500px; }
+    #wrapper.toggled #page-content-wrapper {
+      margin-right: -420px;
+      position: absolute; }
+
+#sidebar-wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  background: url("img/1.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 180px;
+  margin-left: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 1000; }
+  #sidebar-wrapper::-webkit-scrollbar {
+    display: none; }
+  #sidebar-wrapper .overlay2 {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2; }
+
+#page-content-wrapper {
+  padding-top: 70px;
+  width: 100%; }
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20%;
+  width: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em; }
+  .sidebar-nav .donate {
+    border: 2px solid #fff;
+    border-radius: 125px;
+    width: 250px;
+    left: 25%;
+    top: 50px;
+    position: relative; }
+    .sidebar-nav .donate:hover {
+      background: #50FFB1;
+      border: 2px solid #50FFB1;
+      transition: all 500ms !important; }
+    .sidebar-nav .donate span {
+      color: #fff;
+      margin-right: 20px; }
+    .sidebar-nav .donate i {
+      color: #fff;
+      margin-right: 10px; }
+  .sidebar-nav li {
+    display: inline-block;
+    line-height: 50px;
+    position: relative;
+    width: 100%;
+    text-align: center; }
+    .sidebar-nav li:before {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 3px;
+      z-index: -1; }
+    .sidebar-nav li:first-child a {
+      color: white; }
+      .sidebar-nav li:first-child a:hover {
+        color: #50FFB1;
+        transition: all 1300ms; }
+    .sidebar-nav li:hover:before {
+      width: 100%; }
+    .sidebar-nav li a {
+      color: #dddddd;
+      display: block;
+      padding: 10px 15px 10px 30px;
+      text-decoration: none; }
+    .sidebar-nav li.open:hover before {
+      transition: width 0.2s ease-in;
+      width: 100%; }
+  .sidebar-nav .dropdown-menu {
+    background-color: #222222;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%; }
+  .sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    background-color: transparent;
+    color: black;
+    text-decoration: none; }
+  .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+    background-color: transparent;
+    color: black;
+    text-decoration: none; }
+  .sidebar-nav > .sidebar-brand {
+    font-size: 20px;
+    height: 65px;
+    line-height: 44px; }
+
+.social-wrap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 500px;
+  font-size: 1.3em;
+  top: 90%;
+  z-index: 2; }
+  .social-wrap li {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #fff; }
+    .social-wrap li a {
+      font-size: 1em;
+      color: #fff;
+      padding: 8px; }
+      .social-wrap li a:hover {
+        color: #50FFB1;
+        transition: all 1000ms !important; }
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+.hamburger {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 32px;
+  margin-left: 15px;
+  position: fixed;
+  top: 20px;
+  width: 32px;
+  z-index: 999; }
+  .hamburger:hover, .hamburger:focus, .hamburger:active {
+    outline: none; }
+  .hamburger.is-closed:before {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    color: #ffffff;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: 100px; }
+  .hamburger.is-closed:hover before {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    display: block;
+    opacity: 1; }
+  .hamburger.is-closed:hover .hamb-top {
+    -webkit-transition: all 0.35s ease-in-out;
+    top: 0; }
+  .hamburger.is-closed:hover .hamb-bottom {
+    -webkit-transition: all 0.35s ease-in-out;
+    bottom: 0; }
+  .hamburger.is-closed .hamb-top {
+    -webkit-transition: all 0.35s ease-in-out;
+    background-color: black;
+    top: 5px; }
+  .hamburger.is-closed .hamb-middle {
+    background-color: black;
+    margin-top: -2px;
+    top: 50%; }
+  .hamburger.is-closed .hamb-bottom {
+    -webkit-transition: all 0.35s ease-in-out;
+    background-color: black;
+    bottom: 5px; }
+  .hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom {
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%; }
+  .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom {
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%; }
+  .hamburger.is-open .hamb-top {
+    -webkit-transform: rotate(45deg);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+    background-color: #fff;
+    margin-top: -2px;
+    top: 50%; }
+  .hamburger.is-open .hamb-middle {
+    background-color: #fff;
+    display: none; }
+  .hamburger.is-open .hamb-bottom {
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+    background-color: #fff;
+    margin-top: -2px;
+    top: 50%; }
+  .hamburger.is-open:before {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    color: #ffffff;
+    content: '';
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    width: 100px; }
+  .hamburger.is-open:hover before {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    -webkit-transition: all 0.35s ease-in-out;
+    display: block;
+    opacity: 1; }
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1; }
+
+.v-align {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%); }
+
+.logo {
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  transform: translate(-50%, -2.5%);
+  text-align: center; }
+  .logo p {
+    font-family: "Kalam", cursive;
+    font-size: 2em; }
+
+.intro-wrap {
+  position: relative;
+  width: 100%; }
+  .intro-wrap .intro {
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.3em;
+    text-align: center;
+    line-height: 3em; }
+
+/*# sourceMappingURL=main.css.map */
