@@ -376,6 +376,97 @@ html {
       .intro-wrap .btn-wrap button:after {
         content: "EXPLORE"; }
 
+.contact {
+  position: relative;
+  display: block;
+  padding: 20px; }
+  .contact p {
+    line-height: 21px; }
+  .contact .logo {
+    text-align: center;
+    font-size: 4em;
+    font-family: "Kalam", cursive;
+    margin: 0px; }
+  .contact .email, .contact h4 {
+    text-align: center;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 80px;
+    text-transform: uppercase; }
+  .contact h4 {
+    color: #50FFB1;
+    margin-top: 60px; }
+
+.form {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em; }
+  .form textarea, .form input {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4em;
+    color: black;
+    max-width: 90%;
+    padding: 0.4rem;
+    border: 2px dashed transparent;
+    box-sizing: border-box;
+    cursor: text; }
+  .form textarea {
+    text-align: left;
+    /* overflow:hidden; */
+    resize: none;
+    width: 90%;
+    border-color: transparent; }
+    .form textarea:focus {
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px dashed black; }
+      .form textarea:focus:required:valid {
+        border: 1px solid transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .form textarea:required:valid {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .form input {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+    .form input:required {
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+  .form textarea:required {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+  .form input:focus {
+    border-bottom: 1px dashed black;
+    background-color: rgba(0, 0, 0, 0.2); }
+  .form input:required:valid {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .form input:required:invalid {
+    color: rgba(0, 0, 0, 0.5); }
+  .form ::-webkit-input-placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    font-weight: 400; }
+  .form :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    font-weight: 400; }
+  .form ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    font-weight: 400; }
+  .form :-ms-input-placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    font-weight: 400; }
+
 .foot .foot-logo {
   text-align: center;
   font-family: "Kalam", cursive;
