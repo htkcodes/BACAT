@@ -293,5 +293,53 @@ html {
     font-size: 2.3em;
     text-align: center;
     line-height: 3em; }
+  .intro-wrap .btn-wrap {
+    text-align: center; }
+    .intro-wrap .btn-wrap button {
+      outline: none;
+      height: 45px;
+      text-align: center;
+      width: 140px;
+      border-radius: 40px;
+      background: #fff;
+      border: 2px solid #50FFB1;
+      color: #50FFB1;
+      letter-spacing: 1px;
+      text-shadow: 0;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease; }
+      .intro-wrap .btn-wrap button:hover {
+        color: white;
+        background: #50FFB1; }
+      .intro-wrap .btn-wrap button:active {
+        letter-spacing: 2px; }
+      .intro-wrap .btn-wrap button:after {
+        content: "EXPLORE"; }
+
+.foot .foot-logo {
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 1.8em;
+  text-transform: uppercase; }
+.foot .social {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px; }
+  .foot .social li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; }
+    .foot .social li a {
+      color: inherit;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      line-height: 19px; }
+.foot .copyright {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
