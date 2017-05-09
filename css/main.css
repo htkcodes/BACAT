@@ -2,6 +2,9 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 /*-------------------------------*/
+/*          MIXINS               */
+/*-------------------------------*/
+/*-------------------------------*/
 /*           VARIABLES           */
 /*-------------------------------*/
 body {
@@ -166,6 +169,54 @@ html {
         color: #50FFB1;
         transition: all 1000ms !important; }
 
+.mobile-nav {
+  width: 100%;
+  background: #50FFB1;
+  position: absolute;
+  top: 0;
+  z-index: 3; }
+  .mobile-nav .menu-collapse {
+    position: relative;
+    background: #fff;
+    color: #000;
+    height: 48px;
+    line-height: 48px;
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 18px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+    .mobile-nav .menu-collapse .collapse-button {
+      position: absolute;
+      right: 0;
+      top: 25px;
+      bottom: 0;
+      height: 100%;
+      padding: 7px 20px;
+      font-size: 30px;
+      transform: translate(0, -50%);
+      box-sizing: border-box;
+      padding-top: 0px; }
+
+#hellotoggle {
+  width: 100%;
+  background: #fff; }
+  #hellotoggle ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+    #hellotoggle ul li {
+      text-align: center;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #eee; }
+      #hellotoggle ul li a {
+        font-family: "Montserrat", sans-serif;
+        color: inherit; }
+
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
@@ -290,9 +341,16 @@ html {
   .intro-wrap .intro {
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 2.3em;
+    font-size: 30px;
+    font-size: 3vw;
     text-align: center;
     line-height: 3em; }
+    @media (max-width: 833.33333px) {
+      .intro-wrap .intro {
+        font-size: 25px; } }
+    @media (min-width: 4333.33333px) {
+      .intro-wrap .intro {
+        font-size: 130px; } }
   .intro-wrap .btn-wrap {
     text-align: center; }
     .intro-wrap .btn-wrap button {
