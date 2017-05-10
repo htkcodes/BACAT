@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Kalam:700|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans:400,700|Kalam:700|Montserrat:400,500");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 @import "https://daneden.github.io/animate.css/animate.min.css";
 /*-------------------------------*/
@@ -86,8 +86,8 @@ html {
     top: 50px;
     position: relative; }
     .sidebar-nav .donate:hover {
-      background: #50FFB1;
-      border: 2px solid #50FFB1;
+      background: #FF5964;
+      border: 2px solid #FF5964;
       transition: all 500ms !important; }
     .sidebar-nav .donate span {
       color: #fff;
@@ -112,7 +112,7 @@ html {
     .sidebar-nav li:first-child a {
       color: white; }
       .sidebar-nav li:first-child a:hover {
-        color: #50FFB1;
+        color: #FF5964;
         transition: all 1300ms; }
     .sidebar-nav li:hover:before {
       width: 100%; }
@@ -166,12 +166,12 @@ html {
       color: #fff;
       padding: 8px; }
       .social-wrap li a:hover {
-        color: #50FFB1;
+        color: #FF5964;
         transition: all 1000ms !important; }
 
 .mobile-nav {
   width: 100%;
-  background: #50FFB1;
+  background: #FF5964;
   position: absolute;
   top: 0;
   z-index: 3; }
@@ -340,17 +340,35 @@ html {
   width: 100%; }
   .intro-wrap .intro {
     text-transform: uppercase;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: black;
     font-size: 30px;
-    font-size: 3vw;
+    font-size: 4.5vw;
     text-align: center;
     line-height: 3em; }
-    @media (max-width: 833.33333px) {
+    @media (max-width: 555.55556px) {
       .intro-wrap .intro {
         font-size: 25px; } }
-    @media (min-width: 4333.33333px) {
+    @media (min-width: 2888.88889px) {
       .intro-wrap .intro {
         font-size: 130px; } }
+    .intro-wrap .intro .sub {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 20px;
+      padding-top: 20px; }
+    .intro-wrap .intro .contact {
+      line-height: 0; }
+    .intro-wrap .intro .spacer {
+      background: #FF5964;
+      position: absolute;
+      height: 4px;
+      width: 400px;
+      letter-spacing: 50%;
+      margin-left: -200px;
+      display: inline-block;
+      top: 30%;
+      transform: rotate(130deg); }
   .intro-wrap .btn-wrap {
     text-align: center; }
     .intro-wrap .btn-wrap button {
@@ -360,8 +378,8 @@ html {
       width: 140px;
       border-radius: 40px;
       background: #fff;
-      border: 2px solid #50FFB1;
-      color: #50FFB1;
+      border: 2px solid #FF5964;
+      color: #FF5964;
       letter-spacing: 1px;
       text-shadow: 0;
       font-size: 14px;
@@ -370,7 +388,7 @@ html {
       transition: all 0.25s ease; }
       .intro-wrap .btn-wrap button:hover {
         color: white;
-        background: #50FFB1; }
+        background: #FF5964; }
       .intro-wrap .btn-wrap button:active {
         letter-spacing: 2px; }
       .intro-wrap .btn-wrap button:after {
@@ -382,24 +400,34 @@ html {
   padding: 20px; }
   .contact p {
     line-height: 21px; }
+  .contact .spacer {
+    margin: 20px auto 40px;
+    background: #FF5964;
+    height: 2px;
+    width: 150px;
+    display: block; }
   .contact .logo {
     text-align: center;
     font-size: 4em;
     font-family: "Kalam", cursive;
-    margin: 0px; }
+    margin-top: -60px; }
   .contact .email, .contact h4 {
     text-align: center;
-    font-size: 17px;
-    font-family: "Montserrat", sans-serif;
+    font-size: 1.65em;
+    font-family: "Josefin Sans", sans-serif;
     margin-top: 80px;
+    letter-spacing: 5px;
     text-transform: uppercase; }
   .contact h4 {
-    color: #50FFB1;
-    margin-top: 60px; }
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0; }
 
 .form {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-bottom: 300px;
   width: 500px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.9em; }
@@ -466,7 +494,44 @@ html {
     color: rgba(0, 0, 0, 0.4);
     font-style: italic;
     font-weight: 400; }
+  .form .submit-btn {
+    outline: none;
+    height: 45px;
+    text-align: center;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid #FF5964;
+    color: #FF5964;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease; }
+    .form .submit-btn:hover {
+      color: white;
+      background: #FF5964; }
+    .form .submit-btn:active {
+      letter-spacing: 2px; }
+    .form .submit-btn:after {
+      content: "SUBMIT"; }
 
+.map {
+  width: 100%;
+  margin-bottom: 60px; }
+  .map .map-wrap {
+    height: 300px;
+    background: #FF5964;
+    width: 100%; }
+
+.foot .spacer {
+  background: #FF5964;
+  height: 2px;
+  width: 150px;
+  display: block; }
 .foot .foot-logo {
   text-align: center;
   font-family: "Kalam", cursive;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans|Kalam:700|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans:400,700|Kalam:700|Montserrat:400,500');
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
 
 @import "https://daneden.github.io/animate.css/animate.min.css";
@@ -38,7 +38,7 @@
 /*           VARIABLES           */
 /*-------------------------------*/
 
-$green:#50FFB1;
+$green:#FF5964; //FIERY ROSE
 $whi:#fff;
 $mons:'Montserrat', sans-serif;
 $dos:'Dosis', sans-serif;
@@ -472,12 +472,31 @@ padding: 8px;
   width: 100%;
 .intro{
   text-transform: uppercase;
-  font-family: $jos;
-@include responsive-font(3vw, 25px, 130px, 30px);
+  font-family: $mons;
+  font-weight: 500;
+  color: black;
+@include responsive-font(4.5vw, 25px, 130px, 30px);
   text-align: center;
   line-height: 3em;
-
-
+.sub{
+  font-family: $jos;
+font-size: 20px;
+padding-top: 20px;
+}
+.contact{
+  line-height:0;
+}
+.spacer{
+  background: $green;
+  position: absolute;
+  height: 4px;
+  width: 400px;
+  letter-spacing: 50%;
+  margin-left: -200px;
+  display: inline-block;
+  top: 30%;
+  transform: rotate(130deg);
+}
 }
 .btn-wrap{
   text-align: center;
@@ -522,29 +541,39 @@ padding: 8px;
   p{
         line-height: 21px;
   }
-
+  .spacer{
+    margin: 20px auto 40px;
+    background: $green;
+    height: 2px;
+    width: 150px;
+    display: block;
+  }
   .logo{
     text-align: center;
     font-size: 4em;
     font-family: $kal;
-    margin:0px;
+    margin-top: -60px;
   }
   .email{
     text-align: center;
-    font-size: 17px;
-    font-family: $mons;
+    font-size: 1.65em;
+    font-family: $jos;
     margin-top: 80px;
+letter-spacing: 5px;
     text-transform: uppercase;
   }
   h4{
 @extend .email;
-color: $green;
-margin-top: 60px;;
+margin-top: 40px;;
+font-size: 17px;
+font-weight: 700;
+letter-spacing: 0;
   }
 }
 .form{
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 80px;
+  margin-bottom: 300px;
   width: 500px;
   font-family: $mons;
   font-size: 0.9em;
@@ -609,6 +638,8 @@ margin-top: 60px;;
     }
   }
 
+
+
   ::-webkit-input-placeholder {
     text-align: center;
     color: rgba(0,0,0, 0.4);
@@ -638,11 +669,56 @@ margin-top: 60px;;
     font-style: italic;
     font-weight: 400;
   }
+  .submit-btn{
+    outline:none ;
+    height: 45px;
+    text-align: center;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius:40px;
+    background: #fff;
+    border: 2px solid $green;
+    color:$green;
+    letter-spacing:1px;
+    text-shadow:0;
+    font:{
+      size:14px;
+      weight:bold;
+    }
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+      color:white;
+      background: $green;
+    }
+    &:active {
+      //letter-spacing: 2px;
+      letter-spacing: 2px ;
+    }
+    &:after {
+      content:"SUBMIT";
+    }
+  }
 }
 
-
+.map{
+  width: 100%;
+  margin-bottom: 60px;
+  .map-wrap{
+    height: 300px;
+    background: $green;
+    width: 100%;
+  }
+}
 
 .foot{
+  .spacer{
+    background: $green;
+    height: 2px;
+    width: 150px;
+    display: block;
+  }
   .foot-logo{
     text-align: center;
     font-family: $kal;
