@@ -112,7 +112,6 @@ html {
 }
 
 #page-content-wrapper {
-  padding-top: 70px;
   width: 100%;
 
 }
@@ -462,6 +461,7 @@ padding: 8px;
   left: 50%;
   transform: translate(-50%,-2.5%);
   text-align: center;
+  z-index: 1;
   p{
     font-family: $kal;
     font-size: 2em;
@@ -710,6 +710,26 @@ letter-spacing: 0;
     background: $green;
     width: 100%;
   }
+}
+.gallery-wrapper{
+  background: $green;
+  height: 600px;
+  width: 100%;
+  z-index: 999;
+  #multiscroll{
+    margin-left: -100px;
+  }
+  .g-overlay{
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+  }
+  a{
+  display: block;
+  &:hover{
+    text-decoration: none;
+  }
+  }
+
 }
 
 .foot{

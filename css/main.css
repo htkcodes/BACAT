@@ -63,7 +63,6 @@ html {
     z-index: 2; }
 
 #page-content-wrapper {
-  padding-top: 70px;
   width: 100%; }
 
 /*-------------------------------*/
@@ -330,7 +329,8 @@ html {
   top: 2.5%;
   left: 50%;
   transform: translate(-50%, -2.5%);
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   .logo p {
     font-family: "Kalam", cursive;
     font-size: 2em; }
@@ -526,6 +526,21 @@ html {
     height: 300px;
     background: #FF5964;
     width: 100%; }
+
+.gallery-wrapper {
+  background: #FF5964;
+  height: 600px;
+  width: 100%;
+  z-index: 999; }
+  .gallery-wrapper #multiscroll {
+    margin-left: -100px; }
+  .gallery-wrapper .g-overlay {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .gallery-wrapper a {
+    display: block; }
+    .gallery-wrapper a:hover {
+      text-decoration: none; }
 
 .foot .spacer {
   background: #FF5964;
