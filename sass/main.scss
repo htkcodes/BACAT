@@ -731,7 +731,53 @@ letter-spacing: 0;
   }
 
 }
+.about-head{
 
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $jos;
+
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  .about-sub{
+    text-align: center;
+    font-family: $mons;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+  }
+
+  .testimonial{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    .testimonial-wrap{
+      height: 300px;
+      width: 100%;
+      padding: 0;
+      position: relative;
+      .bx-wrapper{
+        background:none;
+        border: none;
+        box-shadow: none;
+        position: absolute;
+      @extend .v-align;
+
+      li{
+        color:$whi;
+        font-family: $mons;
+        text-align: center;
+        font-size: 1.1em;
+   }
+      }
+    }
+  }
+  .full{
+    padding-left: 0;
+      padding-right: 0;
+  }
 .foot{
   .spacer{
     background: $green;

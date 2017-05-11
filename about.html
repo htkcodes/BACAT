@@ -14,13 +14,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />
-
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="css/main.css">
-
-
-
 
   </head>
   <body>
@@ -86,32 +82,54 @@
 
 
     </div><!-- /.container -->
-    <div class="main-wrap" style="height:774px">
+    <div class="main-wrap-c" data-parallax="scroll" data-image-src="./css/img/bg.png" style="height:774px;z-index:101">
+    <div class="v-align">
+    <div class="container">
 
-    <div class="container-fluid">
-<div class="row">
-  <div class="col-md-12">
-    <div class="gallery-wrapper">
-      <div id="multiscroll">
-    <div class="ms-left">
-        <div class="ms-section" style="background-image:url('css/img/6.png')"><div class="g-overlay">
-  <a href="" class="v-align"><h5>hello</h5></a>
+      <section class="intro-wrap">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+      <div class="intro contact">
+        <p >ABOUT US</p>
+        <div class="spacer"></div>
+        <p class="sub">HISTORY OF OUR EXHIBITION</p>
+      </div>
+
+      </div>
+      </div>
+      </section>
+
+    </div>
+    </div>
+    </div>
+    <section class="contact" style="margin-top:200px">
+      <div class="container">
+        <div class="row"><div class="col-md-12">
+          <p class="logo">BACAT</p>
+
+          <p class="about-head">WE ARE BACAT, AUTHENTIC EXHIBITION FORUM FROM JAMAICA</p>
+              <div class="spacer"></div>
+          <h4 class="about-sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolorum ipsam illum pariatur nam voluptatum aperiam voluptatem ab soluta excepturi eius accusantium, ad nemo beatae expedita est dolores ex fugit.</h4>
         </div></div>
-        <div class="ms-section" style="background-image:url('css/img/2.jpg')">Section 2 left</div>
-        <div class="ms-section"  style="background-image:url('css/img/3.jpeg')">Section 3 left</div>
-    </div>
-    <div class="ms-right">
-        <div class="ms-section" style="background-image:url('css/img/4.jpg')">Section 1 right</div>
-        <div class="ms-section" style="background-image:url('css/img/5.jpeg')">Section 2 right</div>
-        <div class="ms-section" style="background-image:url('css/img/9.jpeg')">Section 3 right</div>
-    </div>
-</div>
-    </div>
-  </div>
-</div>
+      </div>
+    </section>
+    <section class="testimonial">
+      <div class="container-fluid full">
+        <div class="row ">
+          <div class="col-md-12">
+            <div class="testimonial-wrap" data-parallax="scroll" data-image-src="css/img/12.jpeg">
+              <ul class="bxslider ">
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptate saepe, dolor id tempora pariatur quasi, error delectus perferendis unde sunt veritatis distinctio voluptatibus? Itaque enim ex nisi, sapiente porro.</p></li>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptate saepe, dolor id tempora pariatur quasi, error delectus perferendis unde sunt veritatis distinctio voluptatibus? Itaque enim ex nisi, sapiente porro.</p></li>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptate saepe, dolor id tempora pariatur quasi, error delectus perferendis unde sunt veritatis distinctio voluptatibus? Itaque enim ex nisi, sapiente porro.</p></li>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptate saepe, dolor id tempora pariatur quasi, error delectus perferendis unde sunt veritatis distinctio voluptatibus? Itaque enim ex nisi, sapiente porro.</p></li>
+</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
-    </div>
     <footer class="foot">
       <div class="container">
         <div class="row"><article class="col-md-12">
@@ -137,18 +155,26 @@
     <script type="text/javascript" src="js/main.js">
 
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    	<script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+<!-- bxSlider CSS file -->
 
-
-    	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/multiscroll.js/0.1.8/jquery.multiscroll.js"></script>
-      <script type="text/javascript">
-      $(document).ready(function() {
-$('#multiscroll').multiscroll({
-  controls: false
+<script type="text/javascript">
+$(document).ready(function(){
+$('.bxslider').bxSlider({
+  controls: true,
+pager:false,
+auto:true,
+pause: 5000,
+autoHover:true
 });
 });
-      </script>
-
+</script>
+<script>
+$('.testimonial-wrap').parallax({
+  naturalWidth: 600,
+  naturalHeight: 400
+});
+</script>
   </body>
 </html>
