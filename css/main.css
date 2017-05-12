@@ -319,7 +319,7 @@ html {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1; }
 
-.v-align, .testimonial .testimonial-wrap .bx-wrapper {
+.v-align, .testimonial .testimonial-wrap .bx-wrapper, .intro-wrap-d ul li .price p {
   top: 50%;
   position: relative;
   transform: translateY(-50%); }
@@ -392,7 +392,7 @@ html {
       .intro-wrap .btn-wrap button:active {
         letter-spacing: 2px; }
       .intro-wrap .btn-wrap button:after {
-        content: "EXPLORE"; }
+        content: "EXPlORE"; }
 
 .contact {
   position: relative;
@@ -536,11 +536,26 @@ html {
     margin-left: -100px; }
   .gallery-wrapper .g-overlay {
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    transition: all 1s ease-in; }
+    .gallery-wrapper .g-overlay:hover {
+      background-color: rgba(255, 255, 255, 0.5); }
+    .gallery-wrapper .g-overlay .opa {
+      opacity: 0; }
   .gallery-wrapper a {
-    display: block; }
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: #FF5964;
+    display: block;
+    transition: all 1s ease; }
     .gallery-wrapper a:hover {
       text-decoration: none; }
+    .gallery-wrapper a h5 {
+      font-size: 1.8em;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px; }
 
 .about-head {
   text-align: center;
@@ -580,6 +595,143 @@ html {
 .full {
   padding-left: 0;
   padding-right: 0; }
+
+.intro-wrap-d {
+  position: relative;
+  width: 100%; }
+  .intro-wrap-d .intro {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 30px;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1em; }
+    @media (max-width: 625px) {
+      .intro-wrap-d .intro {
+        font-size: 25px; } }
+    @media (min-width: 3250px) {
+      .intro-wrap-d .intro {
+        font-size: 130px; } }
+    .intro-wrap-d .intro .sub {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 15px;
+      margin: 0; }
+    .intro-wrap-d .intro .contact {
+      line-height: 0; }
+    .intro-wrap-d .intro .spacer {
+      background: #FF5964;
+      position: absolute;
+      height: 4px;
+      width: 400px;
+      letter-spacing: 50%;
+      margin-left: -200px;
+      display: inline-block;
+      top: 30%;
+      transform: rotate(130deg); }
+  .intro-wrap-d .btn-wrap {
+    margin-top: 50px;
+    text-align: center; }
+    .intro-wrap-d .btn-wrap button {
+      outline: none;
+      height: 45px;
+      text-align: center;
+      width: 160px;
+      border-radius: 40px;
+      background: #fff;
+      border: 2px solid #FF5964;
+      color: #FF5964;
+      letter-spacing: 1px;
+      text-shadow: 0;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease; }
+      .intro-wrap-d .btn-wrap button:hover {
+        color: white;
+        background: #FF5964; }
+      .intro-wrap-d .btn-wrap button:active {
+        letter-spacing: 2px; }
+      .intro-wrap-d .btn-wrap button:after {
+        content: "DONATE"; }
+    .intro-wrap-d .btn-wrap #d-msg {
+      margin-top: 50px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8em;
+      margin-right: -20px; }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
+    .intro-wrap-d .btn-wrap .loader {
+      animation: spin 1s ease-in-out infinite alternate both;
+      height: 50px;
+      position: relative;
+      margin: 0 auto;
+      width: 50px; }
+      .intro-wrap-d .btn-wrap .loader svg:not(#circle-middle) {
+        animation: spin 1s ease-in-out infinite alternate both;
+        position: absolute;
+        top: -50%;
+        left: 0;
+        transform-origin: bottom center; }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(1):not(#circle-middle) {
+      transform: rotate(30deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(2):not(#circle-middle) {
+      transform: rotate(60deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(3):not(#circle-middle) {
+      transform: rotate(90deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(4):not(#circle-middle) {
+      transform: rotate(120deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(5):not(#circle-middle) {
+      transform: rotate(150deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(6):not(#circle-middle) {
+      transform: rotate(180deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(7):not(#circle-middle) {
+      transform: rotate(210deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(8):not(#circle-middle) {
+      transform: rotate(240deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(9):not(#circle-middle) {
+      transform: rotate(270deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(10):not(#circle-middle) {
+      transform: rotate(300deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(11):not(#circle-middle) {
+      transform: rotate(330deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(12):not(#circle-middle) {
+      transform: rotate(360deg); }
+    .intro-wrap-d .btn-wrap .loader svg:nth-of-type(13):not(#circle-middle) {
+      transform: rotate(390deg); }
+  .intro-wrap-d ul {
+    margin: 0 auto;
+    padding-right: 40px;
+    list-style: none; }
+    .intro-wrap-d ul li {
+      animation-delay: 500ms;
+      display: inline-block;
+      transition: all 1s ease; }
+      .intro-wrap-d ul li .price {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border: 1px solid #FF5964;
+        margin-top: 50px;
+        margin-left: 10px;
+        border-radius: 25px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        background: #FF5964; }
+
+.hvr-grow {
+  display: inline-block;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform; }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    transform: scale(1.1); }
 
 .foot .spacer {
   background: #FF5964;

@@ -526,12 +526,11 @@ padding-top: 20px;
     letter-spacing: 2px ;
   }
   &:after {
-    content:"EXPLORE";
+    content:"EXPlORE";
   }
 }
 }
 }
-
 
 
 .contact{
@@ -721,13 +720,32 @@ letter-spacing: 0;
   }
   .g-overlay{
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    
+      &:hover{
+          background-color: rgba(255,255,255,0.5);
+      }
+      transition: all 1s ease-in;
+      .opa{
+          opacity:0; 
+      }
   }
   a{
+      width: 100px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: $mons;
+      text-transform: uppercase;
+      color: $green;
   display: block;
   &:hover{
     text-decoration: none;
   }
+      h5{
+          font-size: 1.8em;
+          border-bottom: 2px solid black;
+          padding-bottom: 10px;
+      }
+      transition: all 1s ease;
   }
 
 }
@@ -778,6 +796,161 @@ letter-spacing: 0;
     padding-left: 0;
       padding-right: 0;
   }
+.intro-wrap-d{
+  position: relative;
+  width: 100%;
+.intro{
+  text-transform: uppercase;
+  font-family: $mons;
+  font-weight: 400;
+  color: black;
+@include responsive-font(4vw, 25px, 130px, 30px);
+  text-align: center;
+  line-height: 1em;
+.sub{
+  font-family: $jos;
+font-size: 15px;
+    margin: 0;
+}
+.contact{
+  line-height:0;
+}
+.spacer{
+  background: $green;
+  position: absolute;
+  height: 4px;
+  width: 400px;
+  letter-spacing: 50%;
+  margin-left: -200px;
+  display: inline-block;
+  top: 30%;
+  transform: rotate(130deg);
+}
+}
+.btn-wrap{
+    margin-top: 50px;
+  text-align: center;
+  button {
+  outline:none;
+  height: 45px;
+  text-align: center;
+  width: 160px;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid $green;
+  color:$green;
+  letter-spacing:1px;
+  text-shadow:0;
+  font:{
+    size:14px;
+    weight:bold;
+  }
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: $green;
+  }
+  &:active {
+    //letter-spacing: 2px;
+    letter-spacing: 2px ;
+  }
+  &:after {
+    content:"DONATE";
+  }
+}
+    #d-msg{
+        margin-top: 50px;
+        font-family: $mons;
+        font-size: 0.8em;
+        margin-right: -20px;
+    }
+  $circle-count: 13;
+$loader-proportion: 50px;
+$animation_config: (
+  name: spin,
+  duration: 1s,
+  timing: ease-in-out,
+  iteration: infinite,
+  direction: alternate,
+  fill-mode: both
+);
+
+@function sh-setup($config) {
+  @return zip(map-values($config)...);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: sh-setup($animation_config);
+  height: $loader-proportion;
+  position: relative;
+    margin: 0 auto;
+  width: $loader-proportion;
+
+  svg:not(#circle-middle) {
+    animation: sh-setup($animation_config);
+    position: absolute;
+    top: -50%;
+    left: 0;
+    transform-origin: bottom center;
+  }
+}
+
+@for $i from 1 through $circle-count {
+  .loader svg:nth-of-type(#{$i}):not(#circle-middle) {
+    transform: rotate(($i * (360/($circle-count - 1))) + deg);
+  }
+}
+}
+
+    ul{
+    
+        margin: 0 auto;
+        padding-right: 40px;
+        list-style: none;
+        li{
+            animation-delay: 500ms;
+            display: inline-block;
+            transition:all 1s ease;
+              .price{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border: 1px solid $green;
+        margin-top: 50px;
+                  margin-left: 10px;
+border-radius:25px;
+        color:$whi;
+        font-family: $mons;
+        background: $green;
+        p{
+       @extend .v-align;
+        }
+    }
+        }
+    }
+  
+}
+.hvr-grow {
+  display: inline-block;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  &:hover, &:focus, &:active {
+    transform: scale(1.1);
+  }
+}
+
 .foot{
   .spacer{
     background: $green;
